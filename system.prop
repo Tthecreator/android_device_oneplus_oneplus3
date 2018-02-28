@@ -30,7 +30,6 @@ ro.oem_unlock_supported=1
 
 # RIL
 persist.radio.multisim.config=dsds
-rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 ril.subscription.types=NV,RUIM
 ro.telephony.default_network=22,20
 telephony.lteOnCdmaDevice=1
