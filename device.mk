@@ -216,10 +216,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm-service.clearkey
 
-# Encryption
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
-
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
     OneplusPocketMode \
