@@ -69,6 +69,11 @@ persist.vendor.radio.sw_mbn_update=0
 # Sensors
 ro.vendor.sensors.smd=false
 
+# SOC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=MSM8996
+
 # Unknown
 ro.vendor.qti.va_aosp.support=1
 ro.vendor.qti.va_odm.support=1
+
