@@ -26,6 +26,8 @@
 
 PLATFORM_PATH := device/oneplus/oneplus3
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
 BOARD_VENDOR := oneplus
@@ -73,7 +75,7 @@ TARGET_KERNEL_CONFIG := lineageos_oneplus3_defconfig
 BOARD_USES_QCOM_HARDWARE := true
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+#BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Audio
 #AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
@@ -207,6 +209,7 @@ include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(PLATFORM_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
