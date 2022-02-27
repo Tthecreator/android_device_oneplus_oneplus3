@@ -1,0 +1,2 @@
+# a12 bringup
+allow qti_init_shell default_prop:file { getattr open };

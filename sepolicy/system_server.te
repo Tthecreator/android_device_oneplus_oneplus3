@@ -1,2 +1,5 @@
 # OTA with encrypted f2fs
 allow system_server ota_package_file:dir getattr;
+
+# a12 bringup
+allow system_server build_bootimage_prop:file read;

@@ -1,0 +1,2 @@
+# a12 bringup
+allow untrusted_app vendor_persist_camera_prop:file { getattr open };

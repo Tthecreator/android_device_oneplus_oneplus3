@@ -1,0 +1,3 @@
+# a12 bringup
+allow init self:netlink_route_socket read;
+allow init sysfs:dir create;
