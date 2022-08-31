@@ -1,6 +1,9 @@
 # Alipay
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.ifaa@2\.0-service                     u:object_r:hal_ifaa_default_exec:s0
 
+# Audio
+/(vendor|system/vendor)/bin/hw/android\.hardware\.audio\.service\.op3_msm8996           u:object_r:hal_audio_default_exec:s0
+
 # Bluetooth
 /sys/devices/vendor/vendor:bt_qca6174/rfkill/rfkill0/state      u:object_r:sysfs_bluetooth_writable:s0
 /sys/devices/vendor/vendor:bt_qca6174/extldo                    u:object_r:sysfs_bluetooth_writable:s0

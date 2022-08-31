@@ -116,7 +116,7 @@ PRODUCT_PACKAGES += \
     tinymix
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.service \
+    android.hardware.audio.service.op3_msm8996 \
     android.hardware.soundtrigger@2.1-impl \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl
