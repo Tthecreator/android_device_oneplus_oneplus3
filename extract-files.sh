@@ -64,6 +64,13 @@ function blob_fixup() {
         vendor/lib\(64\)?/hw/vulkan.msm8996.so)
             "${PATCHELF}" --set-soname "vulkan.msm8996.so" "${2}"
             ;;
+        vendor/lib/libmmcamera2_sensor_modules.so)
+            sed -i "s/\/system\/etc\/camera\//\/vendor\/etc\/camera\//g" "${2}"
+            ;;
+        vendor/lib/libmmcamera2_stats_modules.so)
+            "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
+            "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
+            ;;
         etc/permissions/qti_libpermissions.xml)
             sed -i "s/name=\"android.hidl.manager-V1.0-java/name=\"android.hidl.manager@1.0-java/g" "${2}"
             ;;
