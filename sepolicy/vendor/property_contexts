@@ -4,3 +4,6 @@ vendor.min_freq_0                   u:object_r:vendor_mpctl_prop:s0
 vendor.min_freq_4                   u:object_r:vendor_mpctl_prop:s0
 wifi.active.interface               u:object_r:wifi_prop:s0
 persist.vendor.wigig.npt.enable     u:object_r:vendor_default_prop:s0
+qcom.bluetooth.soc                  u:object_r:vendor_bluetooth_prop:s0
+ro.bluetooth.emb_wp_mode            u:object_r:vendor_bluetooth_prop:s0
+wc_transport.                       u:object_r:vendor_bluetooth_prop:s0
