@@ -18,6 +18,7 @@ cc_library_shared {
     name: "libui_shim",
     srcs: ["GraphicBuffer.cpp"],
     shared_libs: ["libui"],
+    system_ext_specific: true,
 }
 
 cc_library {
@@ -27,4 +28,5 @@ cc_library {
         "strdup8to16.cpp",
     ],
     shared_libs: ["libcutils"],
+    system_ext_specific: true,
 }
