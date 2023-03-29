@@ -193,7 +193,7 @@ TARGET_VENDOR_PROP += $(PLATFORM_PATH)/vendor.prop
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(PLATFORM_PATH)/sepolicy/public
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
