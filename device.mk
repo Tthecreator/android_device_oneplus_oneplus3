@@ -93,16 +93,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so \
-    persist.vendor.radio.apm_sim_not_pwdn=1 \
-    persist.vendor.radio.sib16_support=1 \
-    persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.rat_on=combine \
-    sys.vendor.shutdown.waittime=500 \
-    ro.frp.pst=/dev/block/bootdevice/by-name/config \
-    persist.radio.multisim.config=dsds
-
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
@@ -162,34 +152,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=1 \
-    vendor.audio_hal.period_size=192 \
-    ro.vendor.audio.sdk.fluencetype=fluence \
-    persist.vendor.audio.fluence.voicecall=true \
-    persist.vendor.audio.fluence.voicerec=false \
-    persist.vendor.audio.fluence.speaker=true \
-    vendor.audio.tunnel.encode=false \
-    vendor.audio.offload.buffer.size.kb=64 \
-    audio.offload.video=true \
-    vendor.audio.offload.track.enable=true \
-    audio.deep_buffer.media=true \
-    vendor.voice.path.for.pcm.voip=true \
-    vendor.audio.offload.multiaac.enable=true \
-    vendor.audio.dolby.ds2.enabled=false \
-    vendor.audio.dolby.ds2.hardbypass=false \
-    vendor.audio.offload.multiple.enabled=false \
-    vendor.audio.offload.passthrough=false \
-    ro.vendor.audio.sdk.ssr=false \
-    vendor.audio.offload.gapless.enabled=true \
-    vendor.audio.safx.pbe.enabled=true \
-    vendor.audio.parser.ip.buffer.size=262144 \
-    vendor.audio.hw.aac.encoder=true \
-    ro.af.client_heap_size_kbyte=7168 \
-    persist.vendor.audio.hw.binder.size_kbyte=1024 \
-    ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_steps=7
-
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -202,17 +164,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=rome
-
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service
-
-# Charger
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.charger.enable_suspend=true
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -240,9 +195,6 @@ PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl \
     vendor.display.color@1.0-service \
     vendor.display.color@1.0-impl
-
-PRODUCT_PROPERTY_OVERRIDES  += \
-    ro.opengles.version=196610
 
 # Display calibration
 PRODUCT_PACKAGES += \
@@ -384,14 +336,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/libnfc-nxp_RF.conf
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.nfc_nci=nqx.default \
-    vendor.qti.nfc.chipid=0x51
-
-# OEM Unlock reporting
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=1
-
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -427,12 +371,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.va_aosp.support=1
-
-PRODUCT_ODM_PROPERTIES += \
-    ro.vendor.qti.va_odm.support=1
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -491,20 +429,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.sensors.smd=false
-
 # Shims
 PRODUCT_PACKAGES += \
     libcutils_shim \
     libui_shim
-
-# SurfaceFlinger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
-    ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
-    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-    ro.surface_flinger.max_virtual_display_dimension=4096
 
 # Telephony
 PRODUCT_PACKAGES += \
