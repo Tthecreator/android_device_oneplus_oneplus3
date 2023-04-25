@@ -25,4 +25,8 @@ cc_library_shared {
 
     owner: "qcom",
     vendor: true,
+    header_libs: [
+        "libutils_headers",
+        "libhardware_headers",
+    ],
 }
