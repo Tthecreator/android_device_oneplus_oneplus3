@@ -7,9 +7,9 @@ genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:
 genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,qpnp-smbcharger/power_supply    u:object_r:sysfs_battery_supply:s0
 
 # LEDs
-genfscon sysfs /devices/soc/leds-qpnp-18/leds       u:object_r:sysfs_leds:s0
-genfscon sysfs /devices/soc/leds-qpnp-24/leds       u:object_r:sysfs_leds:s0
-genfscon sysfs /devices/soc/leds-qpnp-25/leds       u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,leds@a300/leds/button-backlight     u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,haptics@c000/leds/vibrator          u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d000/leds                      u:object_r:sysfs_leds:s0
 
 # LiveDisplay
 genfscon sysfs /devices/virtual/graphics/fb0/dci_p3 u:object_r:sysfs_livedisplay_tuneable:s0
