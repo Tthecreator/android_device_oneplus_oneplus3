@@ -238,6 +238,7 @@ PRODUCT_PACKAGES += \
     libgnsspps \
     libsensorndkbridge \
     android.hardware.gnss@1.0.vendor \
+    android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@1.0-impl-qti
 
 PRODUCT_COPY_FILES += \
