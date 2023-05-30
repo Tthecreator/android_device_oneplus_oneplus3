@@ -36,7 +36,7 @@ vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
 # Alipay
 -priv-app/IFAAService/IFAAService.apk
-lib64/vendor.oneplus.hardware.ifaa@2.0.so
+lib64/vendor.oneplus.hardware.ifaa@2.0.so:vendor/lib64/vendor.oneplus.hardware.ifaa@2.0.so
 vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
 vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc
 
@@ -84,8 +84,8 @@ product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
 # Camera
-lib/libmm-qcamera.so
-lib/libqomx_core.so
+lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so
+lib/libqomx_core.so:vendor/lib/libqomx_core.so
 vendor/bin/mm-qcamera-daemon
 vendor/etc/camera/camera_config.xml
 vendor/etc/camera/csidtg_camera.xml
@@ -308,10 +308,10 @@ vendor/lib/libchromatix_s5k3p8sp_postproc.so
 etc/firmware/cpp_firmware_v1_10_0.fw
 
 # Camera postprocessing
-lib/lib_oneplus_md.so
-lib/libFNVfbEngineHAL.so
-lib/qpd_dspcl_v2.bin
-lib/TC_Bayer_Converter_v6_core_opt.bin
+lib/lib_oneplus_md.so:vendor/lib/lib_oneplus_md.so
+lib/libFNVfbEngineHAL.so:vendor/lib/libFNVfbEngineHAL.so
+lib/qpd_dspcl_v2.bin:vendor/lib/qpd_dspcl_v2.bin
+lib/TC_Bayer_Converter_v6_core_opt.bin:vendor/lib/TC_Bayer_Converter_v6_core_opt.bin
 vendor/bin/remosaic_daemon
 vendor/etc/fsync_db.config
 vendor/etc/GyroOffset_db.config
@@ -521,10 +521,10 @@ vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 vendor/lib/libwvhidl.so
 
 # Fingerprint sensor
-lib64/fp_hal_extension.so
-lib64/hw/fingerprint.msm8996.so
-lib64/lib_fpc_tac_shared.so
-lib64/vendor.oneplus.fingerprint.extension@1.0.so
+lib64/fp_hal_extension.so:vendor/lib64/fp_hal_extension.so
+lib64/hw/fingerprint.msm8996.so:vendor/lib64/hw/fingerprint.msm8996.so
+lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so
+lib64/vendor.oneplus.fingerprint.extension@1.0.so:vendor/lib64/vendor.oneplus.fingerprint.extension@1.0.so
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8996.so
@@ -825,7 +825,7 @@ vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa
 vendor/etc/init/vendor.qti.tftp.rc|091915c28a3bc574d39189688748cc922d9e65e4
 
 # Radio - param
-lib64/vendor.oneplus.hardware.param@1.0.so
+lib64/vendor.oneplus.hardware.param@1.0.so:vendor/lib64/vendor.oneplus.hardware.param@1.0.so
 vendor/bin/hw/vendor.oneplus.hardware.param@1.0-service
 vendor/etc/init/vendor.oneplus.hardware.param@1.0-service.rc
 
@@ -838,7 +838,7 @@ lib64/lib-imsvt.so
 lib64/lib-imsvtextutils.so
 lib64/lib-imsvtutils.so
 lib64/librcc.so
-lib64/vendor.qti.imsrtpservice@1.0.so
+lib64/vendor.qti.imsrtpservice@1.0.so:vendor/lib64/vendor.qti.imsrtpservice@1.0.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
