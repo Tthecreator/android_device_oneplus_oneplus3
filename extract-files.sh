@@ -71,6 +71,14 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
             ;;
+        vendor/lib/hw/camera.msm8996.so)
+            "${PATCHELF}" --replace-needed "libcamera_client.so" "libcamera2ndk.so" "${2}"
+            "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
+            "${PATCHELF}" --remove-needed "libcameraservice.so" "${2}"
+            ;;
+        vendor/lib/libFNVfbEngineHAL.so)
+            "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
+            ;;
         etc/permissions/qti_libpermissions.xml)
             sed -i "s/name=\"android.hidl.manager-V1.0-java/name=\"android.hidl.manager@1.0-java/g" "${2}"
             ;;
