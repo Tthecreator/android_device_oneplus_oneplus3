@@ -79,6 +79,9 @@ function blob_fixup() {
         vendor/lib/libFNVfbEngineHAL.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             ;;
+        vendor/lib/libmms_hal_vstab.so)
+            "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
+            ;;
         etc/permissions/qti_libpermissions.xml)
             sed -i "s/name=\"android.hidl.manager-V1.0-java/name=\"android.hidl.manager@1.0-java/g" "${2}"
             ;;
